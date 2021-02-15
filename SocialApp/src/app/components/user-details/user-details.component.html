@@ -1,18 +1,19 @@
 <body>
-
     <div class="container">
         <div class="row">
             <div class="col p-4">
                 <p *ngIf="!listLoaded">User profil is loading...</p>
                 <div class="text-center" *ngIf="listLoaded">
-                    <B> {{user.name | uppercase}}<br>
-                        {{user.username | uppercase}}
+                    <div *ngFor="let u of user">
+                    <B> {{u.name | uppercase}}<br>
+                        {{u.username | uppercase}}
                     </B>
                     <div class="col">
-                        <span>E-mail: {{user.email}}</span><br>
-                        <span>Web page: {{user.website}}</span><br>
-                        <span>Phone: {{user.phone}}</span>
+                        <span>E-mail: {{u.email}}</span><br>
+                        <span>Web page: {{u.website}}</span><br>
+                        <span>Phone: {{u.phone}}</span>
                     </div>
+                </div>
                 </div>
                 <div class="col text-center pt-3">
                     <div *ngFor="let p of userPost">

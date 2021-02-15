@@ -7,10 +7,10 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import {AlbumsComponent } from './components/albums/albums.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: MenuComponent
-  },
+  // {
+  //   path: '',
+  //   component: MenuComponent
+  // },
   {
     path: 'users',
     component: UserListComponent,

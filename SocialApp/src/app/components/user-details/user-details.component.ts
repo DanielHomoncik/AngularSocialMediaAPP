@@ -10,19 +10,19 @@ import { User } from '../../user';
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
-  user: User[]=[];
-  userPost: Post[] =[];
+  user: User[] = [];
+  userPost: Post[] = [];
   listLoaded: boolean = false;
   userId = 4
-  constructor(private readonly userSrvice: UserService,
-    private readonly route: ActivatedRoute) { }
+  constructor(public readonly userSrvice: UserService,
+    public readonly route: ActivatedRoute) { }
   ngOnInit(): void {
     const userId = this.route.snapshot.paramMap.get("userId")
     const ID = (userId === null) ? 0 : Number.parseInt(userId)
 
     this.userSrvice.getUser(ID)
       .subscribe(value => {
-        this.userId=ID;
+        this.userId = ID;
         this.user = value;
         this.listLoaded = true;
       });
