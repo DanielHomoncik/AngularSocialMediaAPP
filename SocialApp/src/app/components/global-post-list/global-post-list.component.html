@@ -1,0 +1,27 @@
+<!-- <div *ngFor=" let p of posts">
+    <fieldset>
+        {{p.title}}<br>{{p.body}}<br>
+        <a [routerLink]="['/users/' + p.userId]">{{p.userId}}</a>
+    </fieldset>
+ -->
+
+<body>
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col text-center">
+                <tr>
+                    <td class="Title">Title</td>
+                    <td class="Body">Body</td>
+                </tr>
+            </div>
+            <div class="col">
+                <tr>
+                    <div *ngFor=" let p of posts">
+                        <td class="Title p-2">{{p.title}}</td>
+                        <td class="Body p-2">{{p.body}}</td>
+                    </div>
+                </tr>
+            </div>
+        </div>
+    </div>
+</body>

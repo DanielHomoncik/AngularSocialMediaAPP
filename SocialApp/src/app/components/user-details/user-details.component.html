@@ -1,0 +1,30 @@
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col p-4">
+                <p *ngIf="!listLoaded">User profil is loading...</p>
+                <div class="text-center" *ngIf="listLoaded">
+                    <B> {{user.name | uppercase}}<br>
+                        {{user.username | uppercase}}
+                    </B>
+                    <div class="col">
+                        <span>E-mail: {{user.email}}</span><br>
+                        <span>Web page: {{user.website}}</span><br>
+                        <span>Phone: {{user.phone}}</span>
+                    </div>
+                </div>
+                <div class="col text-center pt-3">
+                    <div *ngFor="let p of userPost">
+                        <div *ngIf="p.userId == userId ">
+                            <fieldset class="posts">
+                                <div class="title">{{p.title}}<br></div>
+                                {{p.body}}
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

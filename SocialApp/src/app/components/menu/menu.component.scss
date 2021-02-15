@@ -1,0 +1,22 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+.title {
+  font-size: Xx-large;
+  font-weight: bold;
+  color: #fc4445;
+}
+
+.subpageSelection {
+  border: solid;
+  border-width: thin;
+  color: #66FCF1;
+  background-color: #1F2833;
+}
+@media only screen and (max-width: 768px) {
+  .subpageSelection{
+    display: block;
+    width: 80vw;
+    // padding: 0px;
+  }
+}

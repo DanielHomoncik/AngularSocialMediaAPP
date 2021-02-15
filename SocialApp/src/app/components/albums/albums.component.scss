@@ -1,0 +1,30 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  background-color: #C5C6C7;
+  height: 100vh;
+  width: 100vw;
+
+  .Title {
+    background-color: #1F2833;
+    min-width: 70vw;
+    max-width: 70vw;
+    border: solid;
+    border-width: thin;
+    color: #66FCF1;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+
+
+
+    .Title {
+      width: 100vw;
+      min-width: none;
+      max-width: none;
+      //  padding:10vw;
+    }
+
+  }
+}
