@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { GlobalPostListComponent } from './components/global-post-list/global-post-list.component';
 import { AlbumsComponent } from './components/albums/albums.component';
+import { PhotosComponent } from './components/photos/photos.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AlbumsComponent } from './components/albums/albums.component';
     MenuComponent,
     UserDetailsComponent,
     GlobalPostListComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,

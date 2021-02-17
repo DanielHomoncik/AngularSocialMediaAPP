@@ -4,7 +4,7 @@
             <div class="col text-center">
                 <tr>
                     <div *ngFor=" let a of album">
-                        <td class="Title p-2">{{a.id}}{{a.title}}{{a.title}}</td>
+                        <a [routerLink]="'/albums/'+[a.id]+'/photos' "style="color:rgb(102,252,241);"> <td class="Title p-2">{{a.id}}{{a.title}}{{a.title}}</td></a>     
                     </div>
                 </tr>
             </div>

@@ -4,7 +4,8 @@ import { GlobalPostListComponent } from './components/global-post-list/global-po
 import { MenuComponent } from './components/menu/menu.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { UserListComponent } from './components/user-list/user-list.component';
-import {AlbumsComponent } from './components/albums/albums.component';
+import { AlbumsComponent } from './components/albums/albums.component';
+import { PhotosComponent } from './components/photos/photos.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'albums',
     component: AlbumsComponent,
+  },
+  {
+    path: 'albums/:albumId/photos',
+    component: PhotosComponent,
   }
 ];
 
