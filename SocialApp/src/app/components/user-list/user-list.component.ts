@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import { User } from '../../user';
 @Component({
@@ -9,14 +10,9 @@ import { User } from '../../user';
 export class UserListComponent implements OnInit {
 
   users: User[]=[];
-  listLoaded: Boolean = false;
-  constructor(private readonly userService: UserService) { }
+  constructor(private readonly route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.userService.getUserList()
-      .subscribe(value => {
-        this.users = value;
-        this.listLoaded = true;
-      });
+    this.users =this.route.snapshot.data.UserList
   }
 }

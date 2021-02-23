@@ -10,22 +10,12 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class PhotosComponent implements OnInit {
 
-  photos: Photos[] = [];
-  albumId = 0;
-  listLoaded: boolean = false;
+  photos: Photos[] ;
   constructor(private readonly userService: UserService,
     public readonly route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const albumId = this.route.snapshot.paramMap.get("albumId")
-    const ID = (albumId === null) ? 0 : Number.parseInt(albumId)
-    this.userService.getPhoto(ID)
-      .subscribe(value => {
-        this.albumId = ID;
-        this.photos = value;
-         this.listLoaded = true;
-      }
-      )
-  };
+    this.photos = this.route.snapshot.data.Photo
+  }
 
 }

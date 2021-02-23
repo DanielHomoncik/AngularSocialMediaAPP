@@ -1,4 +1,6 @@
 import { Component, OnInit, } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UsersPostsResolverService } from 'src/app/resolvers/users-posts-resolver.service';
 import { UserService } from 'src/app/services/user.service';
 import { Post } from "../../post"
 @Component({
@@ -8,16 +10,14 @@ import { Post } from "../../post"
 })
 export class GlobalPostListComponent implements OnInit {
 
-  posts: Post[] =[];
+  posts: Post[] ;
   tableColor: boolean = false;
-  constructor(private readonly userService: UserService) { }
+  constructor(private readonly route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-    this.userService.getPosts()
-      .subscribe(value => {
-        this.posts = value;
-      });
+    this.posts = this.route.snapshot.data.Post;
+
   }
 
 

@@ -8,13 +8,12 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./albums.component.scss']
 })
 export class AlbumsComponent implements OnInit {
-  album: Albums[] =[]
-  constructor(private readonly userService: UserService,
+  album: Albums[]
+  constructor(
     private readonly route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.userService.getAlbums() .subscribe(value =>
-      this.album= value)
+   this.album = this.route.snapshot.data.Albums
   }
 
 }

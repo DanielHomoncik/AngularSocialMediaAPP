@@ -1,13 +1,11 @@
 <body>
-    <p *ngIf="!listLoaded">Users list is loading...</p>
-    <div *ngIf="listLoaded">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3 class="text-center pt-5">User List</h3>
-                    <div class="userTile text-center" *ngFor="let u of users">
-                        <a [routerLink]="['/users/' + u.id] "style="color:rgb(102,252,241);">{{u.name}} {{u.username}} </a>
-                    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3 class="text-center pt-5">User List</h3>
+                <div class="userTile text-center" *ngFor="let u of users">
+                    <a [routerLink]="['/users/' + u.id] " style="color:rgb(102,252,241);">{{u.name}} {{u.username}} </a>
                 </div>
             </div>
         </div>
